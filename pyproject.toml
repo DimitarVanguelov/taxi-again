@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "taxi-again"
+version = "0.1.0"
+description = ""
+authors = ["Dimitar Vanguelov <dvanguelov@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.12"
+dagster = "^1.7.14"
+dbt = "^1.0.0.38.5"
+dagster-dbt = "^0.23.14"
+dagster-webserver = "^1.7.14"
+duckdb = "^1.0.0"
+dbt-duckdb = "^1.8.1"
+polars = "^1.2.1"
+pyarrow = "^17.0.0"
+dagster-duckdb = "^0.23.14"
+dagster-polars = "^0.23.14"
+dagster-duckdb-polars = "^0.23.14"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+pytest = "^8.3.1"
+ruff = "^0.5.4"
+sqlfluff = "^3.1.0"
+pre-commit = "^3.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.dagster]
+module_name = "taxi_again.main"
+code_location_name = "taxi_again"
